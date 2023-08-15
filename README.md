@@ -1,2 +1,2 @@
 # angular-todo
-angular 16+ todo app
+Angular 16+ todo app with signals
