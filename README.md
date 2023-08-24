@@ -1,7 +1,7 @@
 # angular-todo
 Angular 16+ todo app using signals
 
-## future features
+## Future Features
 make it progressive web app 
 
 ## UML-ish
