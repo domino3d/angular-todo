@@ -13,6 +13,9 @@ import { AppComponent } from 'src/app/app.component';
 export class TimeIntervalComponent {
   _time!: String;
 
+  /**
+   * @required
+   */
   @Input('setTime')
   set time(value: number) {
     this._time = this.convertFromSecondsToString(value);
