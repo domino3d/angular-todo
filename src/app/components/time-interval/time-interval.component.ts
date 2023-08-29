@@ -11,24 +11,27 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./time-interval.component.scss']
 })
 export class TimeIntervalComponent {
-  @Input('setTime') time: number = 3;
+  _time!: String;
+
+  @Input('setTime')
+  set time(value: number) {
+    this._time = this.convertFromSecondsToString(value);
+  }
   @Output() updateTime = new EventEmitter<number>();
 
-  ngOnChanges(changes: SimpleChanges) {
-    // this.timeSignal.set(this.time);
-    console.log("2 this.time: ", this.time);
+  timeChanged(time: string) {
+    this.convertFromStringToSeconds(time);
+    this.updateTime.emit(this.convertFromStringToSeconds(time));
   }
 
-  // timeSignal = signal(2);
-
-  constructor() {
-    console.log("1 this.time: ", this.time);
-    // signal(this.time);
+  convertFromSecondsToString(seconds: number) {
+    return new Date(seconds * 1000).toISOString().substring(11, 19);
   }
-  
-  timeChanged(time: any) {
-    console.log("3 change: ", time);
-    this.updateTime.emit(this.time);
+
+  convertFromStringToSeconds(time: string) {
+    let timeArray = time.split(':');
+    let seconds = Number(timeArray[0]) * 360 + Number(timeArray[1]) * 60 + Number(timeArray[2]);
+    return seconds;
   }
 
 }

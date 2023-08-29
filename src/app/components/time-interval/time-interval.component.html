@@ -1,6 +1,6 @@
 <p>time-interval works!</p>
 <input 
-    [(ngModel)]="time"
+    [(ngModel)]="_time"
     type="time" 
     id="timeInterval" 
     name="timeInterval" 
@@ -8,9 +8,3 @@
     step="1"
     (ngModelChange)="timeChanged($event)"
     >
-
-    <!-- [(ngModel)]="time" -->
-    <!-- [ngModel]="time" -->
-    <!-- value="00:00:00"  -->
-
-    {{time}}

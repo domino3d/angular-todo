@@ -1,4 +1,23 @@
 input[type="time"]::-webkit-calendar-picker-indicator {
-    // background: none;
     display: none;
+}
+
+input::-webkit-datetime-edit-text,::after {
+    // -webkit-user-modify: read-only !important;
+    // display: inline;
+    // font: inherit !important;
+    position: relative;
+    top: 7.5px;
+}
+
+input {
+    border: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input:focus {
+    border: none;
+}
+input:focus-visible {
+    outline: none;
 }
