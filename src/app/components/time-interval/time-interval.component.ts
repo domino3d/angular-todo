@@ -13,16 +13,14 @@ import { AppComponent } from 'src/app/app.component';
 export class TimeIntervalComponent {
   _time!: String;
 
-  /**
-   * @required
-   */
   @Input('setTime')
   set time(value: number) {
     this._time = this.convertFromSecondsToString(value);
   }
-  @Output() updateTime = new EventEmitter<number>();
+  @Output() updateTime:EventEmitter<number> = new EventEmitter<number>();
 
   timeChanged(time: string) {
+    console.log("convertFromSecondsToString: " + time);
     this.convertFromStringToSeconds(time);
     this.updateTime.emit(this.convertFromStringToSeconds(time));
   }

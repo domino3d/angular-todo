@@ -1,2 +1,8 @@
-<time-interval [setTime]="123" ></time-interval>
-<!-- <time-interval [setTime]="000001" [(updateTime)]="updateTime"></time-interval> -->
+<!-- <time-interval [setTime]="time" ></time-interval> -->
+<time-interval [setTime]="time" (updateTime)="updateTime($event)"></time-interval>
+<br>
+<br>
+<br>
+<input type="number" [(ngModel)]="time" />
+updated: {{ updated }}
+
