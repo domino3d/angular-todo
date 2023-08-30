@@ -1,0 +1,8 @@
+<p>bootstrap time-interval works!</p>
+<ngb-timepicker
+    id='timepicker' 
+    [(ngModel)]="time"
+    [seconds]="true"
+    [spinners]="false"
+    (ngModelChange)="timeChanged($event)"
+    ></ngb-timepicker>

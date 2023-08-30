@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Inject, Input, Output, SimpleChanges, WritableSignal, forwardRef, signal } from '@angular/core';
+import { Component, EventEmitter, Input, Output, forwardRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from 'src/app/app.component';
 
@@ -17,10 +17,9 @@ export class TimeIntervalComponent {
   set time(value: number) {
     this._time = this.convertFromSecondsToString(value);
   }
-  @Output() updateTime:EventEmitter<number> = new EventEmitter<number>();
+  @Output() updateTime: EventEmitter<number> = new EventEmitter<number>();
 
   timeChanged(time: string) {
-    console.log("convertFromSecondsToString: " + time);
     this.convertFromStringToSeconds(time);
     this.updateTime.emit(this.convertFromStringToSeconds(time));
   }

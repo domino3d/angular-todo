@@ -1,8 +1,13 @@
-<!-- <time-interval [setTime]="time" ></time-interval> -->
+Parent works!
+<input type="number" [(ngModel)]="time" />
+Emited: {{ updated }}
+<br>
+<br>
+<hr />
 <time-interval [setTime]="time" (updateTime)="updateTime($event)"></time-interval>
 <br>
 <br>
-<br>
-<input type="number" [(ngModel)]="time" />
-updated: {{ updated }}
+<hr />
+<time-interval-bootstrap [setTime]="time" (updateTime)="updateTime($event)"></time-interval-bootstrap>
+
 
