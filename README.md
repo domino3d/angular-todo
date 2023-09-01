@@ -3,8 +3,11 @@ Angular 16+ app using standalone components
 
 ## standalone time interval component
 for editing the time interval (HH.MM.SS)
+
 Input is a parameter of type number, which would set the initial time in seconds
+
 Output EventEmitter<number>, which give a value in seconds when the time change
+
 It is possible to click into the component and edit the numbers. That is, click with the mouse on the place I want and write a number on the keyboard.
 
 ![Animation](https://github.com/domino3d/angular-todo/assets/10728013/6086ba2a-3648-41c9-aa23-28d5076d84c7)
