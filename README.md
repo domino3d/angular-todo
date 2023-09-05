@@ -2,7 +2,7 @@
 Angular 16+ app using standalone components
 
 ## standalone time interval component
-for editing the time interval (HH.MM.SS)
+For editing the time interval (HH.MM.SS)
 
 Input is a parameter of type number, which would set the initial time in seconds
 
