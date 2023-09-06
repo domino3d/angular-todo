@@ -18,4 +18,10 @@ describe('TimeIntervalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // test for the `time` property to be 123 
+  it('should have a time property of 123', () => {
+    expect(component.time).toBe(123);
+  }
+  );
 });

@@ -2,8 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Injectable, Input, Output, forwardRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from 'src/app/app.component';
-import { NgbTimeAdapter } from '@ng-bootstrap/ng-bootstrap';
-import { NgbTimepickerModule, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTimeAdapter, NgbTimepickerModule, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
 
 /**
  * String Time adapter

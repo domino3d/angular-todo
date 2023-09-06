@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TimeIntervalComponent } from './components/time-interval/time-interval.component';
 import { FormsModule } from '@angular/forms';
+import { TimeIntervalComponent } from './components/time-interval/time-interval.component';
 import { TimeIntervalBootstrapComponent } from './components/time-interval-bootstrap/time-interval-bootstrap.component';
 
 @Component({
@@ -17,12 +17,12 @@ import { TimeIntervalBootstrapComponent } from './components/time-interval-boots
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-todo';
+  title: string = 'angular-todo';
 
-  time = 123;
-  updated = "";
+  time: number = 123;
+  updated: number | undefined;
 
-  updateTime(time: any) {
+  updateTime(time: number) {
     this.updated = time;
   }
 }
