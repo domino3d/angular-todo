@@ -30,7 +30,7 @@ export class TimeIntervalComponent {
 
   convertFromStringToSeconds(time: string) {
     let timeArray = time.split(':');
-    let seconds = Number(timeArray[0]) * 360 + Number(timeArray[1]) * 60 + Number(timeArray[2]);
+    let seconds = Number(timeArray[0]) * 3600 + Number(timeArray[1]) * 60 + Number(timeArray[2]);
     return seconds;
   }
 

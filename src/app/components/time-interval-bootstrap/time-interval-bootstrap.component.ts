@@ -25,7 +25,7 @@ export class NgbTimeNumAdapter extends NgbTimeAdapter<number> {
 
   // from struct to number
   toModel(time: NgbTimeStruct | null): number | null {
-    return time != null ? Number(time.hour) * 360 + Number(time.minute) * 60 + Number(time.second) : null;
+    return time != null ? Number(time.hour) * 3600 + Number(time.minute) * 60 + Number(time.second) : null;
   }
 }
 
