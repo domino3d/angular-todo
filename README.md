@@ -2,7 +2,7 @@
 Angular 16+ todo app using signals
 
 ## future features
-make it progressive web app 
+Make it progressive web app 
 
 ## UML-ish
 
